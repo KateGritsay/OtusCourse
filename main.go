@@ -1,0 +1,5 @@
+package OtusCourse
+
+func main() {
+
+}
