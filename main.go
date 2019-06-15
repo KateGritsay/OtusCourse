@@ -2,6 +2,7 @@ package main
 
 import (
 	"fmt"
+	"log"
 	"strconv"
 	"strings"
 	"unicode"
@@ -41,7 +42,7 @@ func Exercise2(startString string) string{
 		h, err := strconv.ParseInt(num, 0, 16)
 
 		if err != nil {
-			fmt.Printf("Error parse string to int")
+			log.Printf("Error parse string to int")
 		}
 		result += strings.Repeat(string(runeString[i]), int(h)-1)
 	}
