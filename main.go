@@ -1,5 +1,6 @@
-package OtusCourse
+package main
 
 func main() {
-
+	Test()
 }
+
