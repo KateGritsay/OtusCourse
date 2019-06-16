@@ -10,12 +10,12 @@ import (
 )
 
 func main() {
-	//fmt.Println(Exercise2("a3b3c3"))
-	fmt.Println(Exercise3("Об этом Sohu сообщает Sohu китайское издание Sohu ем самым, пишут авторы материала, Россия вынудила буквально весь мир сомневаться в военном превосходстве США. Соединенные Штаты Америки, признает Sohu, начали разрабатывать гиперзвуковое оружие задолго до Российской Федерации — еще в период холодной войны. 		Сегодня же, сообщает Sohu, Россия демонстрируется свои гиперзвуковые ракеты"))
+	fmt.Println(Exercise3("a3b3c3"))
+	fmt.Println(Exersice4("Об этом Sohu сообщает Sohu китайское издание Sohu ем самым, пишут авторы материала, Россия вынудила буквально весь мир сомневаться в военном превосходстве США. Соединенные Штаты Америки, признает Sohu, начали разрабатывать гиперзвуковое оружие задолго до Российской Федерации — еще в период холодной войны. 		Сегодня же, сообщает Sohu, Россия демонстрируется свои гиперзвуковые ракеты"))
 }
 
 
-func Exercise2(startString string) string{
+func Exercise3(startString string) string{
 
 	var runeString = []rune (startString)
 	var result string
@@ -51,11 +51,11 @@ func Exercise2(startString string) string{
 	return result;
 }
 
-type Ex3Output struct {
+type Ex4Output struct {
 	Key string
 	Value int
 }
-func Exercise3(inputText string) []Ex3Output {
+func Exersice4(inputText string) []Ex4Output {
 	inputText = strings.ReplaceAll(inputText, ",", "")
 	inputText = strings.ReplaceAll(inputText, ".", "")
 	inputText = strings.ReplaceAll(inputText, ":", "")
@@ -63,9 +63,9 @@ func Exercise3(inputText string) []Ex3Output {
 	inputText = strings.ReplaceAll(inputText, "?", "")
 	inputText = strings.ReplaceAll(inputText, ";", "")
 	inputText = strings.ToLower(inputText)
-	
+
 	var separatedText  = strings.Split(inputText," ")
-	result := []Ex3Output{}
+	result := []Ex4Output{}
 
 	for index, val := range separatedText {
 		if val == " " {
@@ -82,7 +82,7 @@ func Exercise3(inputText string) []Ex3Output {
 				tail[indexTail] = " "
 			}
 		}
-		result = append(result, Ex3Output{val, counter})
+		result = append(result, Ex4Output{val, counter})
 	}
 	sort.Slice(result, func(i, j int) bool {
 		return result[i].Value > result[j].Value
