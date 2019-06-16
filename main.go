@@ -3,13 +3,15 @@ package main
 import (
 	"fmt"
 	"log"
+	"sort"
 	"strconv"
 	"strings"
 	"unicode"
 )
 
 func main() {
-	fmt.Println(Exercise2("a3b3c3"))
+	//fmt.Println(Exercise2("a3b3c3"))
+	fmt.Println(Exercise3("Об этом Sohu сообщает Sohu китайское издание Sohu ем самым, пишут авторы материала, Россия вынудила буквально весь мир сомневаться в военном превосходстве США. Соединенные Штаты Америки, признает Sohu, начали разрабатывать гиперзвуковое оружие задолго до Российской Федерации — еще в период холодной войны. 		Сегодня же, сообщает Sohu, Россия демонстрируется свои гиперзвуковые ракеты"))
 }
 
 
@@ -47,4 +49,43 @@ func Exercise2(startString string) string{
 		result += strings.Repeat(string(runeString[i]), int(h)-1)
 	}
 	return result;
+}
+
+type Ex3Output struct {
+	Key string
+	Value int
+}
+func Exercise3(inputText string) []Ex3Output {
+	inputText = strings.ReplaceAll(inputText, ",", "")
+	inputText = strings.ReplaceAll(inputText, ".", "")
+	inputText = strings.ReplaceAll(inputText, ":", "")
+	inputText = strings.ReplaceAll(inputText, "!", "")
+	inputText = strings.ReplaceAll(inputText, "?", "")
+	inputText = strings.ReplaceAll(inputText, ";", "")
+	inputText = strings.ToLower(inputText)
+	
+	var separatedText  = strings.Split(inputText," ")
+	result := []Ex3Output{}
+
+	for index, val := range separatedText {
+		if val == " " {
+			continue
+		}
+		var counter int = 0
+		tail := separatedText [index:]
+		for indexTail, valTail := range tail {
+			if valTail == " "{
+				continue
+			}
+			if val == valTail {
+				counter++
+				tail[indexTail] = " "
+			}
+		}
+		result = append(result, Ex3Output{val, counter})
+	}
+	sort.Slice(result, func(i, j int) bool {
+		return result[i].Value > result[j].Value
+	})
+	return result[0:10]
 }
