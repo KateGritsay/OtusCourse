@@ -10,8 +10,8 @@ import (
 )
 
 func main() {
-	fmt.Println(Exercise3("a3b3c3"))
-	fmt.Println(Exersice4("Об этом Sohu сообщает Sohu китайское издание Sohu ем самым, пишут авторы материала, Россия вынудила буквально весь мир сомневаться в военном превосходстве США. Соединенные Штаты Америки, признает Sohu, начали разрабатывать гиперзвуковое оружие задолго до Российской Федерации — еще в период холодной войны. 		Сегодня же, сообщает Sohu, Россия демонстрируется свои гиперзвуковые ракеты"))
+//	fmt.Println(Exercise3("a3b3c3"))
+	fmt.Println(Exersice4("Я в пришла за, я в магазин за в яйцами"))
 }
 
 
@@ -87,5 +87,8 @@ func Exersice4(inputText string) []Ex4Output {
 	sort.Slice(result, func(i, j int) bool {
 		return result[i].Value > result[j].Value
 	})
+	if len(result) < 10 {
+		return result
+	}
 	return result[0:10]
 }
