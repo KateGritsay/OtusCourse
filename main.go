@@ -1,94 +1,13 @@
 package main
 
 import (
+	"./Exercises"
 	"fmt"
-	"log"
-	"sort"
-	"strconv"
-	"strings"
-	"unicode"
 )
 
 func main() {
-//	fmt.Println(Exercise3("a3b3c3"))
-	fmt.Println(Exersice4("Я в пришла за, я в магазин за в яйцами"))
+	//Exercises.RequestEx3("a4bc2d5e")
+
+	fmt.Println(Exercises.Exersice4("Я за пришла за, я в магазин за в яйцами"))
 }
 
-
-func Exercise3(startString string) string{
-
-	var runeString = []rune (startString)
-	var result string
-
-	for  i := 0; i < len(runeString); i++ {
-		if !unicode.IsLetter(runeString[i]) {
-			continue
-		}
-		result += string(runeString[i])
-
-		if i == len(runeString)-1 {
-			break
-		}
-		if unicode.IsLetter(runeString[i+1]){
-			continue
-		}
-
-		num:= string(runeString[i+1])
-		for j := i + 2; j < len(runeString); j++ {
-			if unicode.IsLetter(runeString[j]) {
-				break
-			} else {
-				num += string(runeString[j])
-			}
-		}
-		h, err := strconv.ParseInt(num, 0, 16)
-
-		if err != nil {
-			log.Printf("Error parse string to int")
-		}
-		result += strings.Repeat(string(runeString[i]), int(h)-1)
-	}
-	return result;
-}
-
-type Ex4Output struct {
-	Key string
-	Value int
-}
-func Exersice4(inputText string) []Ex4Output {
-	inputText = strings.ReplaceAll(inputText, ",", "")
-	inputText = strings.ReplaceAll(inputText, ".", "")
-	inputText = strings.ReplaceAll(inputText, ":", "")
-	inputText = strings.ReplaceAll(inputText, "!", "")
-	inputText = strings.ReplaceAll(inputText, "?", "")
-	inputText = strings.ReplaceAll(inputText, ";", "")
-	inputText = strings.ToLower(inputText)
-
-	var separatedText  = strings.Split(inputText," ")
-	result := []Ex4Output{}
-
-	for index, val := range separatedText {
-		if val == " " {
-			continue
-		}
-		var counter int = 0
-		tail := separatedText [index:]
-		for indexTail, valTail := range tail {
-			if valTail == " "{
-				continue
-			}
-			if val == valTail {
-				counter++
-				tail[indexTail] = " "
-			}
-		}
-		result = append(result, Ex4Output{val, counter})
-	}
-	sort.Slice(result, func(i, j int) bool {
-		return result[i].Value > result[j].Value
-	})
-	if len(result) < 10 {
-		return result
-	}
-	return result[0:10]
-}
