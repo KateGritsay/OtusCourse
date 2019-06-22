@@ -2,13 +2,18 @@
 //Написать функцию, которая получает на вход текст и возвращает
 //10 самых часто встречающихся слов без учета словоформ
 
-package Exercises
+package Ex4
 
 import (
+	"fmt"
 	"sort"
 	"strings"
 	"unicode"
 )
+
+func Request()  {
+	fmt.Println(Exersice4("Я за пришла за яйцами, я в я магазин за в яйцами за"))
+}
 
 type Ex4Output struct {
 	Key   string
@@ -24,7 +29,7 @@ func Exersice4(inputText string) []Ex4Output {
 	var wordCount = make(map[string]int)
 	var separatedText = strings.FieldsFunc(inputText, f)
 	result := []Ex4Output{}
-	
+
 	for index, val := range separatedText {
 		if val == " " {
 			continue

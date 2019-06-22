@@ -8,7 +8,7 @@
 //* `qwe\45` => `qwe44444` (*)
 //* `qwe\\5` => `qwe\\\\\` (*)
 
-package Exercises
+package Exercise3
 
 import (
 	"fmt"
@@ -18,7 +18,8 @@ import (
 	"unicode"
 )
 
-func RequestEx3(requestString string) {
+func Request() {
+	requestString := "a4bc2d5e"
 	resultString, err := Exercise3(requestString)
 
 	if err != nil {
