@@ -21,27 +21,32 @@ func Exersice4(inputText string) []Ex4Output {
 	f := func(c rune) bool {
 		return !unicode.IsLetter(c) && !unicode.IsNumber(c)
 	}
-
+	var wordCount = make(map[string]int)
 	var separatedText = strings.FieldsFunc(inputText, f)
 	result := []Ex4Output{}
-
+	
 	for index, val := range separatedText {
 		if val == " " {
 			continue
 		}
-		var counter int = 0
+
+		wordCount[val] = 0
 		tail := separatedText[index:]
 		for indexTail, valTail := range tail {
 			if valTail == " " {
 				continue
 			}
 			if val == valTail {
-				counter++
+				wordCount[val]++
 				tail[indexTail] = " "
 			}
 		}
-		result = append(result, Ex4Output{val, counter})
 	}
+
+	for indexWordCount, elementWordCount := range wordCount {
+		result = append(result, Ex4Output{indexWordCount, elementWordCount})
+	}
+
 	sort.Slice(result, func(i, j int) bool {
 		return result[i].Value > result[j].Value
 	})
