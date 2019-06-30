@@ -1,10 +1,9 @@
 package main
 
 import (
-	Ex "./Exercise1"
+	Ex "./Exercise6"
 )
 
 func main() {
 	Ex.Request()
 }
-
