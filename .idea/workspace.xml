@@ -2,9 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="80d2540d-cc75-4bc4-b3c4-a0edeac7db24" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/Exercise6/Ex6.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Exercise7/Ex7.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Exercise8/Ex8.go" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/main.go" beforeDir="false" afterPath="$PROJECT_DIR$/main.go" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -27,10 +27,22 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/Exercise6/Ex6.go">
+        <entry file="file://$PROJECT_DIR$/Exercise7/Ex7.go">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="297">
-              <caret line="37" column="4" selection-start-line="37" selection-start-column="4" selection-end-line="37" selection-end-column="4" />
+            <state relative-caret-position="342">
+              <caret line="62" column="1" lean-forward="true" selection-start-line="62" selection-start-column="1" selection-end-line="62" selection-end-column="1" />
+              <folding>
+                <element signature="e#711#735#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Exercise8/Ex8.go">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="135">
+              <caret line="9" selection-start-line="9" selection-end-line="9" />
             </state>
           </provider>
         </entry>
@@ -64,6 +76,8 @@
         <option value="$PROJECT_DIR$/main.go" />
         <option value="$PROJECT_DIR$/Exercise3/Ex3.go" />
         <option value="$PROJECT_DIR$/Exercise6/Ex6.go" />
+        <option value="$PROJECT_DIR$/Exercise7/Ex7.go" />
+        <option value="$PROJECT_DIR$/Exercise8/Ex8.go" />
       </list>
     </option>
   </component>
@@ -101,7 +115,12 @@
             <path>
               <item name="OtusCourse" type="b2602c69:ProjectViewProjectNode" />
               <item name="OtusCourse" type="462c0819:PsiDirectoryNode" />
-              <item name="Exercise6" type="462c0819:PsiDirectoryNode" />
+              <item name="Exercise7" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="OtusCourse" type="b2602c69:ProjectViewProjectNode" />
+              <item name="OtusCourse" type="462c0819:PsiDirectoryNode" />
+              <item name="Exercise8" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -168,12 +187,12 @@
     <frame x="0" y="24" width="1440" height="811" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.1502146" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.1502146" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.32962447" />
+      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.32962447" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.3991655" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -304,8 +323,25 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/Exercise6/Ex6.go">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="297">
+        <state relative-caret-position="355">
           <caret line="37" column="4" selection-start-line="37" selection-start-column="4" selection-end-line="37" selection-end-column="4" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Exercise8/Ex8.go">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="135">
+          <caret line="9" selection-start-line="9" selection-end-line="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Exercise7/Ex7.go">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="342">
+          <caret line="62" column="1" lean-forward="true" selection-start-line="62" selection-start-column="1" selection-end-line="62" selection-end-column="1" />
+          <folding>
+            <element signature="e#711#735#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
