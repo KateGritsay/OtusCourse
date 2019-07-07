@@ -30,10 +30,11 @@ package Ex7
 import (
 	"fmt"
 	"io"
+	"os"
 	"time"
 )
 
-type HwAccepdet struct {
+type HwAccepted struct {
 	Id int
 	Grade int
 }
@@ -45,19 +46,28 @@ type HwSubmitted struct {
 }
 
 type OtusEvent interface {
-	Happening ()
+	Happening() string
 }
 
-func (ha HwAccepdet) Happening() string {
+var dt = time.Now().Format("2006-01-01")
 
-	return fmt.Sprint(time.RFC822, "accepted", ha.Id, " /", ha.Grade )
+func (ha HwAccepted) Happening() string {
+	return fmt.Sprint(dt, " accepted ", ha.Id, ha.Grade, " \r" )
 }
 
 func (hs HwSubmitted) Happening() string {
-
-	return fmt.Sprint(time.RFC822, "submitted", hs.Id, " /", hs.Comment )
+	return fmt.Sprint(dt, " submitted ", hs.Id, hs.Comment )
 }
 
 func LogOtusEvent (h OtusEvent, w io.Writer) {
-	fmt.Fprintf(w," /n", h, time.RFC822)
+	fmt.Fprintf(w,"%s", h.Happening())
+}
+
+func Request()  {
+	accepted := HwAccepted{123232, 4}
+	file, _ := os.Create("/Users/Kate/Documents/GitHub/OtusCourse/dat.txt")
+	LogOtusEvent(accepted,file)
+
+	submitted := HwSubmitted{3453, ""," please take a look at my homework"}
+	LogOtusEvent(submitted,file)
 }
