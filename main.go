@@ -1,7 +1,7 @@
 package main
 
 import (
-	Ex "./Exercise7"
+	Ex "./Exercise8"
 )
 
 func main() {
