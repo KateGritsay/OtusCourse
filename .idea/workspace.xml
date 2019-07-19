@@ -2,8 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="80d2540d-cc75-4bc4-b3c4-a0edeac7db24" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/Envdir/envdir.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Envdir/envdir.go" beforeDir="false" afterPath="$PROJECT_DIR$/Envdir/envdir.go" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -16,8 +15,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/Envdir/envdir.go">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="555">
-              <caret line="80" column="18" selection-start-line="80" selection-start-column="18" selection-end-line="80" selection-end-column="18" />
+            <state relative-caret-position="64">
+              <caret line="49" column="14" lean-forward="true" selection-start-line="49" selection-start-column="14" selection-end-line="49" selection-end-column="14" />
               <folding>
                 <element signature="e#459#485#0" expanded="true" />
               </folding>
@@ -409,8 +408,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/Envdir/envdir.go">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="555">
-          <caret line="80" column="18" selection-start-line="80" selection-start-column="18" selection-end-line="80" selection-end-column="18" />
+        <state relative-caret-position="64">
+          <caret line="49" column="14" lean-forward="true" selection-start-line="49" selection-start-column="14" selection-end-line="49" selection-end-column="14" />
           <folding>
             <element signature="e#459#485#0" expanded="true" />
           </folding>

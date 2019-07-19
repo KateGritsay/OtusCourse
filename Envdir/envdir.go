@@ -40,6 +40,7 @@ func Envdir(in io.Reader, out io.Writer, errWriten io.Writer, args []string) err
 	cmd.Stdin = in
 	cmd.Stdout = out
 	cmd.Stderr = errWriten
+	cmd.Env = envir(path, files)
 
 	err = cmd.Run()
 	if err != nil {
@@ -51,7 +52,7 @@ func Envdir(in io.Reader, out io.Writer, errWriten io.Writer, args []string) err
 
 func envir (path string, files []os.FileInfo) []string{
 
-	envir := make ([]string,len(files))
+	envir := make ([]string,0,len(files))
 
 	for _, file := range files {
 		if file.IsDir(){
@@ -66,6 +67,7 @@ func envir (path string, files []os.FileInfo) []string{
 
 		var b strings.Builder
 		b.WriteString(file.Name())
+		b.WriteString("=")
 		b.WriteString(string(content))
 
 	envir = append(envir,b.String())
